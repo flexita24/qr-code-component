@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #D5E1EF;
+    font-family: "Outfit", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh !important;
+}
+
+.content {
+    width: 320px;
+    height: 499px;
+    padding: 16px 16px 40px 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    margin: auto;
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+}
+
+.qr-image {
+    width: 288px;
+    height: 288px;
+    border-radius: 10px;
+    background: rgb(44, 125, 250);
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    /* Required for z-index to work */
+    z-index: 10;
+    /* Higher value to place above all */
+    padding: 64px;
+    height: 100%;
+}
+
+.oval-big,
+.oval-small {
+    background: rgb(54, 133, 255);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.oval-small {
+    width: 328px;
+    height: 328px;
+    left: -131.5px;
+    right: 336.5px;
+    top: -164.5px;
+    bottom: 475.5px;
+    z-index: 9;
+}
+
+/* Shape 2 */
+.oval-big {
+    width: 270px;
+    height: 270px;
+    left: 131.5px;
+    right: 131.5px;
+    top: 204.5px;
+    bottom: 164.5px;
+}
+
+.qr-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.qr-info h2 {
+    color: rgb(31, 49, 79);
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.qr-info p {
+    color: rgb(104, 119, 141);
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Design for 375px and smaller */
+@media (max-width: 375px) {
+
+    .content {
+        width: 320px;
+        height: 499px;
+        gap: 24px;
+        padding: 16px;
+    }
+
+    .qr-image {
+        width: 288px;
+        height: 288px;
+    }
+
+    .qr-code {
+        width: 160px;
+        height: 160px;
+        left: 64px;
+        right: 64px;
+        top: 64px;
+        bottom: 64px;
+    }
+
+    img{
+        padding: 0;
+        height: 100%;
+    }
+
+    .oval-small {
+        width: 328px;
+        height: 328px;
+        left: -131.5px;
+        right: 336.5px;
+        top: -164.5px;
+        bottom: 475.5px;
+    }
+
+    .oval-big {
+        width: 270px;
+        height: 270px;
+        left: 131.5px;
+        right: 131.5px;
+        top: 204.5px;
+        bottom: 164.5px;
+    }
+
+    .qr-info h2 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .qr-info p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.2px;
+        text-align: center;
+    }
+}
